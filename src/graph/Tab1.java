@@ -27,8 +27,6 @@ public class Tab1 extends JPanel {
 		ctr1.gridy = 0;
 		ctr1.weighty = 5;
 		ctr1.weightx = 1;
-		// ctr1.gridwidth = 4;
-		// ctr1.gridheight = 1;
 		ctr1.anchor = GridBagConstraints.WEST;
 		ctr1.fill = GridBagConstraints.BOTH;
 		this.add(chart,ctr1);
@@ -38,43 +36,10 @@ public class Tab1 extends JPanel {
 		ctr2.gridy = 1;
 		ctr2.weighty = 2;
 		ctr2.weightx = 1;
-		// ctr2.gridwidth = 2;
-		// ctr2.gridheight = 1;
 		ctr2.anchor = GridBagConstraints.WEST;
 		ctr2.fill = GridBagConstraints.BOTH;
 		this.add(tablepanel,ctr2);
 		this.setVisible(true);
 		this.setSize(width,height);
-        updateStatus();
-    }
-    private void initComponents() {
-
-    	 GroupLayout layout = new GroupLayout(this);
-    	 this.setLayout(layout);
-		/*
-    	 layout.setHorizontalGroup(
-    	            layout.createParallelGroup(GroupLayout.LEADING)
-    	            .add(layout.createSequentialGroup()
-    	                .addContainerGap()
-    	                .add(layout.createParallelGroup(GroupLayout.LEADING)
-    	                    .add(layout.createSequentialGroup()
-									// .add(12, 12, 12)
-									.add(chart, 600, 700, 800)
-									.addPreferredGap(LayoutStyle.RELATED))))
-    	        );
-    	 layout.setVerticalGroup(
- 	            layout.createParallelGroup(GroupLayout.LEADING)
- 	            .add(layout.createSequentialGroup()
- 	                .addContainerGap()
- 	                .add(layout.createParallelGroup(GroupLayout.LEADING)
- 	                    .add(layout.createSequentialGroup()
-								// .add(12, 12, 12)
-								.add(chart, GroupLayout.PREFERRED_SIZE, 400, GroupLayout.PREFERRED_SIZE)
-								.addPreferredGap(LayoutStyle.RELATED))))
- 	        );
- 	        */
-    }
-    public void updateStatus() {
-    
     }
 }

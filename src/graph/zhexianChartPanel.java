@@ -176,12 +176,12 @@ public class zhexianChartPanel implements Chart
     public  XYDataset createDataset(LineChartModel lineChartModel)
     {
         DefaultXYDataset dataset=new DefaultXYDataset();
-        String[] keys=lineChartModel.getAllKeys();
+        String[] keys=lineChartModel.getAllKeys(StringConstants.rongliang);
         for(int i=0;i<keys.length;i++)
         {
             System.out.println("keys[i]="+keys[i]);
-            double[] xs=lineChartModel.getXValues(keys[i]);
-            double[] ys=lineChartModel.getYValue(keys[i]);
+            double[] xs=lineChartModel.getXValues(StringConstants.rongliang,keys[i]);
+            double[] ys=lineChartModel.getYValue(StringConstants.rongliang,keys[i]);
             double[][] points=new double[2][xs.length];
             //xÖáµÄÊýÖµ
             points[0]=xs;

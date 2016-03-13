@@ -1,6 +1,7 @@
 package graph;
 
 import Model.DataModel;
+import javafx.scene.control.Tab;
 import layout.GroupLayout;
 
 import javax.swing.*;
@@ -13,7 +14,9 @@ import java.awt.event.WindowEvent;
 public class mainframe extends JFrame
 {
    // private static mainframe frame;
-    private static Tab1 tab1;
+    private Tab1 tab1;
+    private Tab2 tab2;
+    private Tab3 tab3;
     private javax.swing.JTabbedPane jTabbedPane;
     int width=1000;
     int height=700;
@@ -37,15 +40,11 @@ public class mainframe extends JFrame
         });
 
         tab1 = new Tab1(dataModel,width,height);
-        JPanel jPanel=new JPanel();
-        jPanel.setVisible(true);
-        jPanel.setBackground(Color.black);
-        JPanel jPanel1=new JPanel();
-        jPanel.setVisible(true);
-        jPanel1.setBackground(Color.blue);
+        tab2 = new Tab2(dataModel,width,height);
+        tab3 = new Tab3(dataModel,width,height);
         jTabbedPane.addTab("数据管理与可视化", null,tab1);
-        jTabbedPane.addTab("Tab2", null,jPanel);
-        jTabbedPane.addTab("Tab3", null,jPanel1);
+        jTabbedPane.addTab("容量预测", null,tab2);
+        jTabbedPane.addTab("性能分析", null,tab3);
         jTabbedPane.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPaneStateChanged(evt);
